@@ -12,10 +12,9 @@ env.bak/
 venv.bak/
 .idea/
 .vscode/
-*.h5
 *.tflite
+*.h5
 *.ipynb_checkpoints
 downloads/
 datasets/
 Dataset/
-uploads/

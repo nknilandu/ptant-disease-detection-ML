@@ -1,29 +1,111 @@
-{% extends "import.html" %} 
+{% extends "import.html" %}
 {% block content %}
 
-<center>
-<br><h2>Plant Disease Classification Using Deep Learning</h2><br>
+<section class="hero-section" id="home">
+    <div class="hero-box">
+        <div class="hero-left">
+            <h1>Smart Detection for Plant Leaf Diseases</h1>
+            <p>
+                Upload a plant leaf image and let the deep learning model analyze it instantly.
+                A cleaner, faster and more professional way to detect common plant leaf diseases.
+            </p>
 
-    <form id="upload-file" method="post" enctype="multipart/form-data">
-         <input type="file" name="file" class="btn btn-success" id="imageUpload" accept=".png, .jpg, .jpeg">
-    </form>
+            <div class="hero-btns">
+                <a href="#predict" class="btn-main">Start Prediction</a>
+                <a href="#about" class="btn-alt">Learn More</a>
+            </div>
+        </div>
 
-
-    <div class="image-section" style="display:none;">
-         <img id="imagePreview"  class="img-responsive" src="#" style="width:300px;height:300px;"/><br><br>
-         <div>
-            <button type="button" class="btn btn-info btn-lg " id="btn-predict">Predict!</button>
-         </div>
+        <div class="hero-right">
+            <div class="plant-banner"></div>
+        </div>
     </div>
+</section>
 
+<section class="features-section">
+    <h2 class="section-title">Why Use This System?</h2>
+    <p class="section-subtitle">
+        This application uses deep learning to classify plant leaf diseases from uploaded images,
+        helping users identify possible disease conditions quickly and efficiently.
+    </p>
 
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Fast Prediction</h3>
+            <p>
+                The system processes uploaded leaf images quickly and returns the predicted disease label in seconds.
+            </p>
+        </div>
 
-    <div class="loader" style="display:none;"></div>
+        <div class="feature-card">
+            <div class="feature-icon">🧠</div>
+            <h3>Deep Learning Based</h3>
+            <p>
+                Built on a trained neural network model to classify diseases from plant leaf patterns and textures.
+            </p>
+        </div>
 
-    <h3 id="result">
-        <span> </span>
-    </h3>
+        <div class="feature-card">
+            <div class="feature-icon">🌱</div>
+            <h3>Farmer Friendly</h3>
+            <p>
+                Simple upload and result workflow makes the system accessible for students, researchers and growers.
+            </p>
+        </div>
+    </div>
+</section>
 
+<section class="predict-section" id="predict">
+    <div class="predict-wrapper">
+        <div class="predict-card">
+            <h2>Detect Plant Disease</h2>
+            <p>Upload a leaf image and predict the disease.</p>
 
-</center><br><br>
+            <div class="upload-box">
+                <form id="upload-file" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+                </form>
+            </div>
+
+            <div class="image-section" style="display:none;">
+                <img id="imagePreview" src="#" alt="Preview">
+                <br>
+                <button type="button" id="btn-predict">Predict Disease</button>
+            </div>
+
+            <div class="loader" style="display:none;"></div>
+
+            <h3 id="result">
+                <span></span>
+            </h3>
+        </div>
+    </div>
+</section>
+
+<section class="about-section" id="about">
+    <h2 class="section-title">About This Project</h2>
+    <p class="section-subtitle">
+        A visually improved plant disease detection web application using Flask, Bootstrap and a trained deep learning model.
+    </p>
+
+    <div class="about-wrapper">
+        <div class="about-card">
+            <h3>Plant Disease Classification Using Deep Learning</h3>
+            <p>
+                This system is designed to help identify plant leaf diseases from images using a deep learning model.
+                Users can upload a leaf image, preview it, and get an instant prediction result.
+            </p>
+            <p>
+                The application is useful as an academic project, prototype solution, or demonstration system
+                for agriculture-related AI applications. The goal is to make plant health monitoring simpler and faster.
+            </p>
+            <p>
+                Future upgrades can include confidence score, treatment suggestions, disease details,
+                prevention tips and multi-language support.
+            </p>
+        </div>
+    </div>
+</section>
+
 {% endblock %}

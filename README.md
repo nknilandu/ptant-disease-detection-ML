@@ -66,3 +66,6 @@ If you encounter issues with the model training or notebook execution:
 - **Dependency Mismatch**: Ensure you are using compatible versions of TensorFlow/Keras (v2.15 recommended) and Python (v3.10 recommended).
 - **Notebook Fix**: Run `python fix_notebook.py` to resolve potential import path issues in `Model_Training.ipynb`.
 - **Error Logs**: Check the console output for detailed error messages.
+
+
+

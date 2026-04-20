@@ -5,3 +5,8 @@ pillow
 opencv-python
 flask
 werkzeug
+ipython
+ipykernel
+scipy
+matplotlib
+seaborn
